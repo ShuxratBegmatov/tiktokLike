@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="vue-container" @mousemove="funck($event)">
+            <img src="https://img.icons8.com/color/48/000000/filled-like.png" :style="stil" class="vue-logo" alt="" srcset="">
+        </div>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            stil:{
+                left:0,
+                top:0,
+                right:0,
+                whidth:30+'px',
+                height:30+'px'
+            }
+        },
+        methods:{
+            funck($event){
+                console.log(event.clientX)
+            }
+        }
+    })
+</script>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .vue-container{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(67,84,102);
+        position: relative;
+    }
+    .vue-logo{
+        position: absolute;
+        color: red;
+    }
+   
+</style>
+</html>
